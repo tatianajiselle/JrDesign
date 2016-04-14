@@ -6,7 +6,7 @@ var level;
 
 router.get('/', function (req, res, next){
 
-    res.render('index', {title:'Fire!, Fire!', log: log});
+    res.render('index', {title:'Fire! Fire!', log: log});
 
 });
 
@@ -16,26 +16,27 @@ router.post('/log', function (req, res, next) {
 
 	console.log(temp);
 
-
 	 if(temp >= 60 && temp < 80){
-
-    log = "Normal";
+       log = "Normal";
 
 	}
 
 	if(temp >= 80 && temp < 110){
-
+        
 		log = "Warm";
+		
 	}
   
   if(temp >= 110 && temp <= 135){
-
+  		
 		log = "Dangerous";
+		
 	}
 
 	if(temp > 135){
-
+		
 		log = "Fire";
+		
 	}
 	
     res.end();

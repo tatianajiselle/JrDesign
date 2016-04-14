@@ -5,7 +5,7 @@ var display = function(){
 
 $.get( "/getlog", function(data) {
   $( "#log" ).html(data);
-  $("log:contains('normal')").css("color", "white");
+l
 });
 
 }
